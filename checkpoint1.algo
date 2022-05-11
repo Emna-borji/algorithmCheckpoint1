@@ -1,0 +1,24 @@
+ALGORITHM algorithm_name
+VAR
+    characterByCharacter:char:="";
+    sentence:string:="";
+    sentenceLength:integer:=0;
+    numberOfWords:integer:=0;
+    vowels:integer:=1;
+BEGIN
+
+write('enter a catacter')
+    WHILE (characterByCharacter not '.') DO
+        read(characterByCharacter);
+       
+        sentenceLength=sentenceLength+1
+
+        IF (characterByCharacter=' ') THEN
+            numberOfWords:=numberOfWords+1;
+        END_IF
+        IF (characterByCharacter in [a,e,o,u,i,y]) THEN
+            vowels=vowels+1;
+        END_IF
+    END_WHILE
+    write()
+END
